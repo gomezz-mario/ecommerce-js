@@ -1,6 +1,7 @@
 import React from "react";
 import styled from 'styled-components';
 import { FaGlideG } from "react-icons/fa";
+import CartButton from "./CartButton";
 
 export const Nabvar = () => {
 	return(
@@ -9,7 +10,7 @@ export const Nabvar = () => {
 			<ul className="nav__list">
 				<li><a className="nav__link" href="">Inicio</a></li>
 				<li><a className="nav__link" href="">Productos</a></li>
-				<li><a className="nav__link" href="">Carrito</a></li>
+				<li><CartButton/></li>
 			</ul>
 		</NavbarContainer>
 	);
@@ -28,7 +29,6 @@ const NavbarContainer = styled.nav`
 		justify-content: start;
 		align-items: center;
 		list-style: none;
-		margin-right: 4rem;
 	}
 	.nav__link{
 		display: flex;
