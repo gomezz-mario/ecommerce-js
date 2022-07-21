@@ -1,7 +1,7 @@
 import React from "react";
 import styled from 'styled-components';
-import { FaGlideG } from "react-icons/fa";
-import CartButton from "./CartButton";
+import {FaGlideG} from "react-icons/fa";
+import CartButton from "../CartButton/CartButton";
 
 export const Nabvar = () => {
 	return(

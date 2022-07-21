@@ -1,9 +1,5 @@
-
-import ItemListContainer from './componentes/ItemListContainer';
-import Navbar from './componentes/Navbar';
-
-import Item from './componentes/Item/Item';
-
+import ItemListContainer from './componentes/ItemListContainer/ItemListContainer';
+import Navbar from './componentes/Navbar/Navbar';
 
 function App() {
   return (
