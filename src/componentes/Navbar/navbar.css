@@ -1,0 +1,24 @@
+.navbar-w{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: .4rem;
+	background-color: #333;
+}
+.navbar__title{
+	margin-left: .4rem;
+	color: #FFF;
+}
+.nav__list {
+	display: flex;
+	justify-content: start;
+	align-items: center;
+	list-style: none;
+}
+.nav__link{
+	display: flex;
+	align-items: center;
+	margin: 1rem;
+	text-decoration: none;
+	color: #FFF;
+}

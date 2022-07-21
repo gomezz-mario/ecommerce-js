@@ -1,0 +1,42 @@
+.burguer-w{
+	display: flex;
+  	align-items: center;
+  	justify-content: center;
+  	padding: 1rem;
+	width: 40px;
+	background: red;
+}
+
+.burguer{
+	width: 40px;
+	cursor: pointer;
+}
+
+.topbread, .paty, .bottombread {
+	width: 100%;
+	background: white;
+	height: 6px;  
+	border-radius: 2px;
+	transition: all 0.5s;
+}
+
+.paty{
+	margin: 8px 0px;
+}
+
+.showup .topbread{
+	transform: rotate(45deg) translate(10px, 10px);  
+}
+
+.showup .paty{
+	opacity: 0;  
+}
+
+.showup .bottombread{
+	transform: rotate(-45deg) translate(10px, -10px);  
+}
+
+.showup {
+	visibility: visible;
+	opacity: 1;
+}
