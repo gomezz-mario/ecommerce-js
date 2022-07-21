@@ -3,7 +3,7 @@ import ItemCount from "../ItemCount/ItemCount";
 import ItemList from "../ItemList/ItemList";
 
 
-const products = [{id: 1, image: "https://picsum.photos/id/237/300/300", name: "Lentes de sol - VULK", description: "", precio: "$8.000", discountPercent: "20% OFF", discountPrice: "$10.000", installments: "6x cuotas sin interés", shipping: "Llega gratis mañana"}];
+const products = [{id: 1, image: "https://picsum.photos/id/237/300/300", name: "Lentes de sol - VULK", description: "Marco metálico resistente y flexible", price: "$8.000", discountPercent: "20% OFF", discountPrice: "$10.000", installments: "6x $1.500 sin interés", shipping: "Envío gratis"}];
 
 export const ItemListContainer = () => {
 	
