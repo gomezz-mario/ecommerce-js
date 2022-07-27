@@ -1,0 +1,7 @@
+
+.item-list{
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: flex-start;
+	padding: 15px;
+}
