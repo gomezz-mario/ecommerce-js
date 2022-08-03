@@ -3,15 +3,20 @@ import { useState } from "react";
 import ItemCount from "../ItemCount/ItemCount";
 import { FiShoppingCart } from "react-icons/fi";
 import {Link} from "react-router-dom";
-import { VscChevronLeft, VscChevronRight} from "react-icons/vsc";
+//import { VscChevronLeft, VscChevronRight} from "react-icons/vsc";
 import "./itemDetail.css";
+import {useCartContext} from "../../context/CartContext"
+
+
 
 export const ItemDetail = ({data}) => {
 	const [count, setCount] = useState(1);
 	const [goToCart, setGoToCart] = useState(false);
+	const {addToCart} = useCartContext();
 
 	const onClickHandler = (e) => {
 		setGoToCart(true);
+		addToCart(data, count);
 	}
 
 	return(
