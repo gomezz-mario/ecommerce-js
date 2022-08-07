@@ -14,10 +14,24 @@ export const CartProvider = ({children}) => {
 	const isInCart = (idProduct) => cart.find(product => product.id === idProduct) ? true: false;
 	const removeFromCart = (idProduct) => setCart(cart.filter(product => product.id !== idProduct));
 
+	const totalItems = () => cart.reduce((acum, item) => acum + item.quantity, 0);
+	const totalPrice = () => cart.reduce((acum, item) => acum + item.quantity * item.price, 0)
+
+
 	console.log(cart);
 	
 	return(
-		<CartContext.Provider value={{addToCart, clearCart, isInCart, removeFromCart}}>
+		<CartContext.Provider value={{
+			addToCart, 
+			clearCart, 
+			isInCart, 
+			removeFromCart, 
+			totalItems, 
+			totalPrice,
+			
+			cart
+			}}>
+				
 			{children}
 		</CartContext.Provider>
 	);
