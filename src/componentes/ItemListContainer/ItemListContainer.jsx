@@ -16,7 +16,7 @@ export const ItemListContainer = () => {
 			getDocs(q).then(snapshot => {
 				const data = snapshot.docs.map(doc =>{
 					const laData = doc.data();
-					return {...laData, doc: doc.id};
+					return {...laData, id: doc.id};
 				});
 				setProductos(data);
 			});
