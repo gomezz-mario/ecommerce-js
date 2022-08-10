@@ -4,9 +4,10 @@ import {FaCartArrowDown} from "react-icons/fa";
 import "./item.css";
 
 export const Item = ({data}) => {
+	console.log(data);
 	return(
 		<div className="item__container item__wrapper">
-			<Link to={`/detalle/${parseInt(data.id)}`}>
+			<Link to={`/detalle/${data.id}`}>
 				<div className="item__container item__container--image">
 					<img src={data.images[0]} alt={data.name} />
 				</div>
