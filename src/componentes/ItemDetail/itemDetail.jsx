@@ -48,7 +48,7 @@ export const ItemDetail = ({data}) => {
 						<button className="btn-add-to-chart" onClick={onClickHandler}><FiShoppingCart/><span> Comprar ahora</span></button>
 					</div>
 					: <div className="shipping__go-to-chart">
-						<Link className="shipping__go-to-chart__link" to="/cart">Finalizar compra</Link>
+						<Link className="shipping__go-to-chart__link" to="/order">Finalizar compra</Link>
 					</div>
 				}
 				

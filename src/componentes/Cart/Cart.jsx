@@ -3,6 +3,7 @@ import { useCartContext } from "../../context/CartContext";
 import { CartItem } from "../CartItem/CartItem";
 import { getFirestore, setDoc } from "firebase/firestore";
 import "./cart.css";
+import { Link } from "react-router-dom";
 
 export const Cart = () => {
 	const {cart, totalPrice} = useCartContext();
@@ -30,8 +31,8 @@ export const Cart = () => {
 				<span>Total: ${totalPrice()}</span>
 			</div>
 			<div className="pagination-container">
-				<button className="btn-pagination-cart">CONTINUAR COMPRANDO</button>
-				<button className="btn-pagination-cart">PASAR POR CAJA</button>
+				<Link to="/" className="btn-pagination-cart">CONTINUAR COMPRANDO</Link>
+				<Link to="/order" className="btn-pagination-cart">PASAR POR CAJA</Link>
 			</div>
 		</div>
 		 
