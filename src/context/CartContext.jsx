@@ -6,9 +6,13 @@ export const useCartContext = () => useContext(CartContext);
 export const CartProvider = ({children}) => {
 	const [cart, setCart] = useState([]);
 	const addToCart = (item, newQuantity) => {
+		console.log(item);
+		console.log("nuevo item.id: " + item.id);
+		console.log("en el carrito items.id" + cart.map(prod => prod.id));
 		let newCart = cart.filter(product => product.id !== item.id);
 		newCart.push({...item, quantity: newQuantity});
 		setCart(newCart);
+		
 	};
 	const clearCart = () => setCart([]);
 	const isInCart = (idProduct) => cart.find(product => product.id === idProduct) ? true: false;

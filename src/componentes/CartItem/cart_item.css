@@ -3,6 +3,8 @@
 	align-items: stretch;
 	justify-content: flex-start;
 	position: relative;
+	background-color: beige;
+	margin: 5px 0px;
 }
 .item-cart__image-container{
 	display: inline-flex;

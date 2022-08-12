@@ -4,7 +4,7 @@ import {FaCartArrowDown} from "react-icons/fa";
 import "./item.css";
 
 export const Item = ({data}) => {
-	console.log(data);
+	//console.log(data);
 	return(
 		<div className="item__container item__wrapper">
 			<Link to={`/detalle/${data.id}`}>

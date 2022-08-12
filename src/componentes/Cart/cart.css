@@ -1,0 +1,40 @@
+.cart-container{
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: flex-start;
+	align-items: center;
+	width: 100%;
+	background-color: blue;
+}
+
+
+.items-container{
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: flex-start;
+	margin: 10px 0px;
+	width: 1400px;
+	background-color: red;
+}
+
+.cart__total-price-container{
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: flex-start;
+	width: 1400px;
+	margin: 10px 0px;
+	color: white;
+}
+
+.pagination-container{
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: space-between;
+	width: 1400px;
+}
+
+.btn-pagination-cart{
+	background: white;
+	padding: 10px;
+	border: 1px solid rgba(50, 50, 50, 0.5);
+}

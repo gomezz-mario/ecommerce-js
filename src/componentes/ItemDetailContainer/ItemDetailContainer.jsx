@@ -12,16 +12,14 @@ export const ItemDetailContainer = () => {
 	const {itemId} = useParams();
 
 	useEffect(()=>{
-		console.log(itemId);
 		const db = getFirestore();
 		const docRef = doc(db, "items", itemId);
 		getDoc(docRef).then(docSnap => {
 			if (docSnap.exists()) {
-				console.log("Document data:", docSnap.data());
-				setData(docSnap.data());
+			//	console.log("Document data:", docSnap.data());
+				setData({id: docSnap.id,...docSnap.data()});
 				setIsLoaded(true);
 		  	} else {
-				// doc.data() will be undefined in this case
 				console.log("No such document!");
 		  	}
 		
