@@ -6,13 +6,13 @@ import {getFirestore, collection, getDocs, query, where} from "firebase/firestor
 
 export const ItemListContainer = () => {
 	const [productos, setProductos] = useState([]);
-	const {marcaId} = useParams();
+	const {category} = useParams();
 
 	useEffect(()=> {
 		const db = getFirestore();
 		const itemsCollection = collection(db, "items");
-		if(marcaId){
-			const q = query(itemsCollection, where("marca","==",marcaId));
+		if(category){
+			const q = query(itemsCollection, where("category","==",category));
 			getDocs(q).then(snapshot => {
 				const data = snapshot.docs.map(doc =>{
 					const laData = doc.data();
@@ -30,18 +30,9 @@ export const ItemListContainer = () => {
 			});
 		}
 
-
-		/*const getData = new Promise((resolve) => {
-			setTimeout(()=>{resolve(catalogo)},3000);
-		});
-		if(marcaId){
-			getData.then(data => setProductos(data.filter(producto => producto.marca === marcaId)));
-		} else{
-			getData.then(data => setProductos(data));
-		}
-		*/
 		
-	}, [marcaId]);
+		
+	}, [category]);
 
 	return(
 		<div className="item-list">

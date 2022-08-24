@@ -1,59 +1,72 @@
-import React from "react";
-import { useState } from "react";
+import React, {useState} from "react";
 import ItemCount from "../ItemCount/ItemCount";
-import { FiShoppingCart } from "react-icons/fi";
 import {Link} from "react-router-dom";
-//import { VscChevronLeft, VscChevronRight} from "react-icons/vsc";
-import "./itemDetail.css";
-import {useCartContext} from "../../context/CartContext"
+import {useCartContext} from "../../context/CartContext";
+import "./item-detail.css";
 
 
 
-export const ItemDetail = ({data}) => {
+const ItemDetail = ({data}) => {
+	
 	const [count, setCount] = useState(1);
 	const [goToCart, setGoToCart] = useState(false);
 	const {addToCart} = useCartContext();
+	
+	const onCount = (newQuantity) => {setCount(newQuantity)};
 
-	const onClickHandler = (e) => {
+	const onCart = (e) => {
 		setGoToCart(true);
 		addToCart(data, count);
+		console.log("se agregaron items al carrito!!");
 	}
 
 	return(
-		<div className="item-details__wrapper">
-			<div className="item-details__media">
-				<div className="id__media-container id__media-container--vista">
-					<img src={data.images[0]} alt={data.name} />
-				</div>	
-				<div className="id__media-container id__media-container--mini">
-					<div className="media-mini__item">
-						<img src={data.images[0]} alt={data.name} />
+		<div className="container-fluid d-flex justify-content-center mt-5 mb-5">
+			<div className="container-md d-flex flex-column">
+				<div className="d-flex">
+					<div className="me-3">
+						<div className="item__image-container">
+							<img src={data.images[0]} alt="..." width={300} height={300}/>
+						</div>
+						<div className="d-flex">
+						{
+							data.images.map(image => {
+								return(
+									<div className="item__image-container" key={image}>
+										<img src={image} alt="..." width={100} height={100}/>
+									</div>
+								);
+							})
+						}
+						</div>
 					</div>
-					<div className="media-mini__item">
-						<img src={data.images[0]} alt={data.name} />
+					<div className="me-3 p-4">
+						<h1 className="item-detail__title">{data.name}</h1>
+						<span className="item-detail__price">${data.price}</span>
+						{	
+							!goToCart ? 
+							<>
+								<div className="mt-3">
+									<span className="quantity-label">CANTIDAD:</span>		
+									<ItemCount count={count} onCount={onCount}/>
+								</div>
+								<button onClick={()=> onCart()} className="btn-comprar">Agregar al carrito</button>
+							</>
+							: 
+							<>
+								<Link to="/cart" className="btn btn-fin-compra">Finalizar compra</Link>
+							</>
+							
+							
+						}
+						
 					</div>
-				</div>	
-			</div>
+				</div>
 
-			<div className="item-details__info">
-				<div className="info__title">
-					<h1>{data.name}</h1>
-				</div>
-				<div className="info__price-and-info">
-					<span className="item-details__price">${data.price}</span>
-				</div>
-				{!goToCart
-					? <div className="shipping__add-to-chart">
-						<ItemCount count={count} onCount={setCount} minCount={1} maxCount={data.stock}/>	
-						<button className="btn-add-to-chart" onClick={onClickHandler}><FiShoppingCart/><span> Comprar ahora</span></button>
-					</div>
-					: <div className="shipping__go-to-chart">
-						<Link className="shipping__go-to-chart__link" to="/order">Finalizar compra</Link>
-					</div>
-				}
 				
 			</div>
 		</div>
 	);
-};
+}
+
 export default ItemDetail; 

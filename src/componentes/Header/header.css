@@ -1,0 +1,29 @@
+.header-container{
+	background: #FAFAFA;
+	box-shadow: -2px 0px 5px 2px #CCCCCC80;
+}
+
+.title{
+	font-size: 30px;
+	font-weight: bold;
+	color: #333;
+}
+.dom{
+	font-size: 20px;
+	font-weight: 500;
+	color: orangered;
+	text-align: end;
+	margin-top: -10px;
+}
+
+.icon{
+	font-size: 20px;
+}
+
+.description{
+	font-size: 10px;
+}
+
+.link{
+	text-decoration: none;
+}

@@ -1,30 +1,14 @@
-import React from "react";
-import "./item_count.css";
-import { FaMinus, FaPlus } from "react-icons/fa";
-import { FiShoppingCart } from "react-icons/fi";
-import { useState } from "react";
-
-export const ItemCount = ({count, onCount, minCount, maxCount}) => {
-
-	
-
-
+import "./item-count.css";
+import {FaPlus, FaMinus} from "react-icons/fa";
+const ItemCount = ({count, onCount})=>{
 	return(
-		<div className="item-count-w">
-					
-			<div className="item-count">
-				<button disabled={(count == minCount)} onClick={()=> onCount(count-1)}><FaMinus/></button>
-				<span className="item-count__count">{count}</span>
-				<button  disabled={(count == maxCount)} onClick={()=> onCount(count+1)}><FaPlus/></button>
-				
+		<div className="d-flex justify-content-between mb-2 item-count__container">
+			<button disabled={(count===1)} onClick={()=>{onCount(count -1)}} className="btn-count"><FaMinus/></button>
+			<div className="d-flex align-items-center justify-content-center ms-2 me-2 item-count__count">
+				<span>{count}</span>
 			</div>
-
-			
-
+			<button onClick={()=>{onCount(count +1)}} className="btn-count"><FaPlus/></button>
 		</div>
-
-		
 	);
-};
-
+}
 export default ItemCount;

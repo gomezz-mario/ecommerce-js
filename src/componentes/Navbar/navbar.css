@@ -1,24 +1,20 @@
-.navbar-w{
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	padding: .4rem;
-	background-color: #333;
+.navbar-container{
+	background: white;
 }
-.navbar__title{
-	margin-left: .4rem;
-	color: #FFF;
+
+.categoria{
+	text-transform: uppercase;
+	font-weight: lighter;
+	font-size: 16px;
+	color: #333;
+	cursor: pointer;
+	transition: color .3s ease;
 }
-.nav__list {
-	display: flex;
-	justify-content: start;
-	align-items: center;
-	list-style: none;
+
+.categoria:hover{
+	color: orangered;
 }
-.nav__link{
-	display: flex;
-	align-items: center;
-	margin: 1rem;
+
+.navlink{
 	text-decoration: none;
-	color: #FFF;
 }

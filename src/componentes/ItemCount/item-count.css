@@ -1,0 +1,28 @@
+.item-count__container{
+	width: 150px;
+}
+
+.item-count__count{
+	border: 1px solid #EEE;
+	border-radius: 2px;
+	width: 100%;
+}
+
+.btn-count{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: #FFF;
+	border: 1px #EEE solid;
+	border-radius: 2px;
+	padding: 8px;
+}
+
+.btn-count:hover{
+	border: 1px solid #333;
+}
+
+.btn-count:disabled{
+	border: #999;
+	color: #AAA;
+}
