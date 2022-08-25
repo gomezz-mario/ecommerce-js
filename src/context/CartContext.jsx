@@ -22,7 +22,7 @@ export const CartProvider = ({children}) => {
 	const totalPrice = () => cart.reduce((acum, item) => acum + item.quantity * item.price, 0)
 
 
-	console.log(cart);
+	//console.log(cart);
 	
 	return(
 		<CartContext.Provider value={{

@@ -27,3 +27,12 @@
 .link{
 	text-decoration: none;
 }
+
+.icon-size-23{
+	height: 23px;
+	width: 23px;
+}
+
+.btn-logout{
+	cursor: pointer;
+}

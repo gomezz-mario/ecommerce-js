@@ -1,0 +1,55 @@
+.login-page__title-section{
+	font-size: 16px;
+	color: #333;
+	margin: 0px;
+}
+
+.login-page__title-secction-block{
+	position: relative;
+	padding: 15px 0px;
+	margin-bottom: 15px;
+	border-bottom: 1px solid #666;
+}
+
+.login-page__title-secction--borde{
+	position: absolute;
+	bottom: 0px;
+	width: 120px;
+	border-bottom: 3px solid orangered;
+}
+
+.form-label{
+	font-weight: 700;
+	font-size: 14px;
+	color: #666;
+}
+
+.login-form-control{
+	border-radius: 0%;
+	border: 1px solid #666;
+}
+
+.login-form-control:hover, .login-form-control:focus{
+	box-shadow: none;
+	border: 1px solid #666;
+}
+
+.login-btn{
+	border: 1px solid #666;
+	background: white;
+	color: #666;
+	font-weight: 500;
+	border-radius: 0%;
+	transition: all 0.3s ease;
+}
+
+.login-btn:hover{
+	border: 1px solid orangered;
+	color: orangered;
+}
+
+.login-page-title{
+	color: #333;
+	font-size: 40px;
+	font-weight: 300;
+}
