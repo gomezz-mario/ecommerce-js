@@ -1,6 +1,6 @@
-import BannerServices from "../../componentes/BannerServices/BannerServices";
-import ItemListContainer from "../../componentes/ItemListContainer/ItemListContainer";
-import Slider from "../../componentes/Slider/Slider";
+import BannerServices from "../../Componentes/BannerServices/BannerServices";
+import ItemListContainer from "../../Componentes/ItemListContainer/ItemListContainer";
+import Slider from "../../Componentes/Slider/Slider";
 
 //import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
 
