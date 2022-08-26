@@ -8,8 +8,8 @@ import OrderView from './Componentes/OrderView/OrderView';
 import Header from './Componentes/Header/Header';
 import Footer from './Componentes/Footer/Footer';
 import HomePage from './pages/HomePage/HomePage';
-import LoginPage from './pages/LoginPage/LoginPage';
-import RegistrationPage from './pages/RegistrationPage/RegistrationPage';
+import LoginPage from './FormsPages/LoginPage';
+import RegistrationPage from './FormsPages/RegistrationPage';
 
 
 

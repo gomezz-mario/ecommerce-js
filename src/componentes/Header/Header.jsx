@@ -34,12 +34,7 @@ const Header = () => {
 					{
 						isLogin ?
 							<>
-								<Link to='/acceso' className="link">
-									<div className="d-flex justify-content-center align-items-center p-2">
-										<BsPerson className="icon icon-size-23"/>
-									</div>
-								</Link>
-								<Link to='/acceso' className="link">
+								<Link to='/' className="link">
 									<div className="d-flex justify-content-center align-items-center p-2">
 										<BsHandbag className="icon"/>
 									</div>
@@ -59,8 +54,6 @@ const Header = () => {
 								<CartButton/>
 							</>
 					}
-					
-						
 					</div>
 
 				</div>
