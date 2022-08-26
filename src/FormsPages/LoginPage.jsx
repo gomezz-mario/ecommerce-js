@@ -1,13 +1,37 @@
 import "./form-page.css";
 import { Link } from "react-router-dom";
+import { useState } from "react";
 
 const LoginPage = () => {
+
+	const [userLog, setUserLog] = useState({
+		email: "",
+		password: ""
+	});
+
+	const [validate, setValidate] = useState(false);
+	const changeHandler = (ev) => {
+		const user = {...userLog};
+		user[ev.target.name] = ev.target.value;
+		setUserLog(user);
+		formValidation();
+	};
+	const sumbitHandler = (ev) => {
+		ev.preventDefault();
+		//aca ya tengo la info para hacer el login... en userLog...
+		console.log(userLog);
+	};
+
+	const formValidation = () => {
+		setValidate( userLog.email.includes('@') && userLog.password.length > 3 );
+	};
+
 	return(
 		<div className="container-fluid d-flex justify-content-center pt-5 pb-5">
 			<div className="container-md">
 				<h1 className="form-page-title">Acceso del cliente</h1>
 				<div className="container-fluid d-flex justify-content-around mt-3 p-0">
-					<form>
+					<form onSubmit={ev => sumbitHandler(ev)}>
 						<section className="form-section">
 							<div className="form-section__title-box">
 								<h3 className="title-box__title">Clientes registrados</h3>
@@ -16,14 +40,14 @@ const LoginPage = () => {
 							<p>Si tiene una cuenta, inicie sesión con su dirección de correo electrónico.</p>
 							<div className="mb-3">
   								<label htmlFor="formRegistroInputEmail" className="form-label">CORREO ELECTRÓNICO: <span className="text-danger">*</span></label>
-  								<input type="email" className="form-control form-input" id="formRegistroInputEmail"/>
+  								<input type="email" name="email" onChange={ev => changeHandler(ev)} className="form-control form-input" id="formRegistroInputEmail"/>
 							</div>
 
 							<div className="mb-3">
   								<label htmlFor="formRegistroInputPass" className="form-label">CONTRASEÑA: <span className="text-danger">*</span></label>
-  								<input type="password" className="form-control form-input" id="formRegistroInputPass"/>
+  								<input type="password" name="password" onChange={ev => changeHandler(ev)} className="form-control form-input" id="formRegistroInputPass"/>
 							</div>
-							<button className="form-sumbit-btn">INICIAR SESIÓN</button>
+							<button disabled={!validate} className="btn form-sumbit-btn">INICIAR SESIÓN</button>
 						</section>
 					</form>
 
