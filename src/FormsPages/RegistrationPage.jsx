@@ -1,42 +1,57 @@
 import "./form-page.css";
-import { Link } from "react-router-dom";
+import { Link, Navigate } from "react-router-dom";
 import { useState } from "react";
+import { useLoginContext } from "../context/LoginContext";
+
 
 const RegistrationPage = () => {
 
+	const {createUser}  = useLoginContext();
 
-	const [newUser, setNewUser] = useState({
-		id: '',
+	const [formSumbited, setFormSumbited] = useState(false);
+	const [formData, setFormData] = useState({
 		nombre: '',
 		apellidos: '',
 		telefono: '',
-		direccion: '',
 		email: '',
-		password: ''
+		password: '',
+		direccion: ''
 	});
 
 	const [validate, setValidate] = useState(false);
 
 	const changeHandler = (ev) => {
-		const user = {...newUser};
-		user[ev.target.name] = ev.target.value;
-		setNewUser(user);
+		const data = {...formData};
+		data[ev.target.name] = ev.target.value;
+		setFormData(data);
 		formValidate();
 	}
 
-	const sumbitHandler = (ev) => {
+	const sumbitHandler = async (ev) => {
 		ev.preventDefault();
-		console.log(newUser);
+		createUser(formData);
+		setFormSumbited(true);
 	}
 
 	const formValidate = () => {
+		console.log("Validando formulario..");
 		let formValidated = false;
-		if(newUser.nombre !== '' && newUser.apellidos !== '' && newUser.telefono !=='' && newUser.direccion !== '' && newUser.email !== '' && newUser.password !== '')
-			if(newUser.email.includes('@'))
-				if(newUser.password.length > 3)
+		if(formData.apellidos !== '' && formData.nombre !== '' && formData.email !== '' && formData.password !== '' && formData.telefono !== '' && formData.direccion !== ''){
+			if(formData.email.includes('@')){
+				if(formData.password.length > 5){
+					console.log("Formulario validado");
 					formValidated = true;
+				}
+			}
+		}
 		setValidate(formValidated);
 	};
+	
+	if(formSumbited){
+		return(
+			<Navigate to="/" />
+		);
+	}
 
 	return(
 		<div className="container-fluid d-flex justify-content-center pt-5 pb-5">
@@ -92,3 +107,9 @@ const RegistrationPage = () => {
 };
 
 export default RegistrationPage;
+
+
+
+//en teoria estoy creando un nuevo usuario...
+//cargando datos en el perfil de usuario...
+//y accediendo.. iniciando sesion

@@ -1,8 +1,12 @@
 import "./form-page.css";
-import { Link } from "react-router-dom";
+import { Link, Navigate } from "react-router-dom";
 import { useState } from "react";
+import { useLoginContext } from "../context/LoginContext";
+
 
 const LoginPage = () => {
+
+	const { userLogin, signInUser } = useLoginContext();
 
 	const [userLog, setUserLog] = useState({
 		email: "",
@@ -18,13 +22,16 @@ const LoginPage = () => {
 	};
 	const sumbitHandler = (ev) => {
 		ev.preventDefault();
-		//aca ya tengo la info para hacer el login... en userLog...
-		console.log(userLog);
+		signInUser(userLog.email, userLog.password);
 	};
 
 	const formValidation = () => {
-		setValidate( userLog.email.includes('@') && userLog.password.length > 3 );
+		setValidate( userLog.email.includes('@') );
 	};
+
+	if(userLogin){
+		return( <Navigate to="/"/> );
+	}
 
 	return(
 		<div className="container-fluid d-flex justify-content-center pt-5 pb-5">
