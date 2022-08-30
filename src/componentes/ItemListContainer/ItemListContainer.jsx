@@ -5,6 +5,7 @@ import {useParams} from "react-router-dom";
 import {getFirestore, collection, getDocs, query, where} from "firebase/firestore"
 
 export const ItemListContainer = () => {
+
 	const [productos, setProductos] = useState([]);
 	const {category} = useParams();
 
@@ -19,6 +20,7 @@ export const ItemListContainer = () => {
 					return {...laData, id: doc.id};
 				});
 				setProductos(data);
+				
 			});
 		}else{
 			getDocs(itemsCollection).then(snapshot => {
@@ -29,10 +31,10 @@ export const ItemListContainer = () => {
 				setProductos(data);
 			});
 		}
-
-		
-		
+			
 	}, [category]);
+
+	
 
 	return(
 		<div className="item-list">

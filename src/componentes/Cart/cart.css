@@ -1,21 +1,10 @@
-.cart-container{
-	display: flex;
-	flex-flow: column nowrap;
-	justify-content: flex-start;
-	align-items: center;
-	width: 100%;
-	background-color: blue;
+
+.cartpage_title{
+	color: #333;
+	font-size: 40px;
+	font-weight: 300;
 }
 
-
-.items-container{
-	display: flex;
-	flex-flow: column nowrap;
-	justify-content: flex-start;
-	margin: 10px 0px;
-	width: 1400px;
-	background-color: red;
-}
 
 .cart__total-price-container{
 	display: flex;
@@ -23,18 +12,37 @@
 	justify-content: flex-start;
 	width: 1400px;
 	margin: 10px 0px;
-	color: white;
+	color: black;
 }
 
-.pagination-container{
-	display: flex;
-	flex-flow: row nowrap;
-	justify-content: space-between;
-	width: 1400px;
+.confirm-btn{
+	cursor: pointer;
+	text-decoration: none;
+	padding: 8px 10px;
+	border-radius: 5px;
+	font-weight: lighter;
+	border: 1px orangered solid;
+	background: orangered;
+	color: #FFF;
+	transition: all ease .3s;
+}
+.confirm-btn:hover{
+	color: #FFF;
+	background: #f14304;
+}
+.cancel-btn:hover{
+	color: #f14304;
+	border-color: #f14304;
 }
 
-.btn-pagination-cart{
-	background: white;
-	padding: 10px;
-	border: 1px solid rgba(50, 50, 50, 0.5);
+.cancel-btn{
+	cursor: pointer;
+	text-decoration: none;
+	padding: 8px 10px;
+	border-radius: 5px;
+	font-weight: lighter;
+	border: 1px #000 solid;
+	background: #FFF;
+	color: #000;
+	transition: all ease .3s;
 }
