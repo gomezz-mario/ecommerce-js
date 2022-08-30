@@ -1,7 +1,7 @@
 import BannerServices from "../../Componentes/BannerServices/BannerServices";
 import ItemListContainer from "../../Componentes/ItemListContainer/ItemListContainer";
 import Slider from "../../Componentes/Slider/Slider";
-
+import BannerPublicitario from "../../Componentes/BannerPublicitario/BannerPublicitario";
 //import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
 
 const dataSlider = {
@@ -12,35 +12,13 @@ const dataSlider = {
 };
 
 const HomePage = ()=>{
-/*
-	const email = "mario@gmail.com";
-	const pass = "mario1234";
 
-	const auth = getAuth();
-	createUserWithEmailAndPassword(auth, email, pass).then((userCredential) => {
-    	const user = userCredential.user;
-		console.log(user);
-  })
-  .catch((error) => {
-    	const errorCode = error.code;
-    	const errorMessage = error.message;
-  });
-
-  CREA UN NUEVO USUARIO!
-
-  */
-
-
-
-
-
-	
-	//console.log(items);
 	return(
 		<main>
 			<Slider data={dataSlider}/>
 			<BannerServices/>
 			<ItemListContainer/>
+			<BannerPublicitario bannerImage="/assets/vector-banner.jpg" heightBanner={200}/>
 		</main>
 	);
 }

@@ -1,0 +1,30 @@
+
+.order-item-container{
+	background: #FBFBFB;
+	border-radius: 5px;
+	box-shadow: 1px 1px 2px 1px rgba(30, 30, 30, .3);
+}
+.order-item__image-container{
+	border: 1px solid #666;
+	border-radius: 5px;
+	background: #FFF;
+	padding: 10px;
+
+}
+
+.order-item-fecha{
+	color: #000;
+	font-size: 16px;
+	font-weight: 500;
+}
+
+.order-item__total{
+	font-size: 28px;
+	color: orangered;
+	font-weight: 400;
+}
+
+.order-item__text-description{
+	font-size: 14px;
+	color: #666;
+}

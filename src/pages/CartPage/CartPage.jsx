@@ -1,9 +1,9 @@
 import React, {useState} from "react";
 import { useCartContext } from "../../context/CartContext";
 import { useLoginContext } from "../../context/LoginContext";
-import { CartItem } from "../CartItem/CartItem";
+import { CartItem } from "../../Componentes/CartItem/CartItem";
 import { getFirestore, addDoc, doc, collection, serverTimestamp } from "firebase/firestore";
-import "./cart.css";
+import "./cartpage.css";
 import { Link, Navigate } from "react-router-dom";
 
 export const Cart = () => {

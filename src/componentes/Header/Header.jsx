@@ -67,7 +67,7 @@ const Header = () => {
 										<BsPerson className="icon icon-size-23"/>
 										<span className="ms-1">{userLogin.nombre}</span>
 									</div>
-									<Link to='/' className="link">
+									<Link to='/orders' className="link">
 										<div className="d-flex justify-content-center align-items-center p-2">
 											<BsHandbag className="icon"/>
 										</div>
