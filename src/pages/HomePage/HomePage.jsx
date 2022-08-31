@@ -16,6 +16,7 @@ const HomePage = ()=>{
 	return(
 		<main>
 			<Slider data={dataSlider}/>
+			
 			<BannerServices/>
 			<ItemListContainer/>
 			<BannerPublicitario bannerImage="/assets/vector-banner.jpg" heightBanner={200}/>

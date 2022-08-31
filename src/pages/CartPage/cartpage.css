@@ -6,6 +6,10 @@
 }
 
 
+.cartpage-main{
+	min-height: calc(100vh - 330px);
+}
+
 .cart__total-price-container{
 	display: flex;
 	flex-flow: row nowrap;

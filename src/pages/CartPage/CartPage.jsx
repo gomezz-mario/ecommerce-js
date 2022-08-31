@@ -2,7 +2,7 @@ import React, {useState} from "react";
 import { useCartContext } from "../../context/CartContext";
 import { useLoginContext } from "../../context/LoginContext";
 import { CartItem } from "../../Componentes/CartItem/CartItem";
-import { getFirestore, addDoc, doc, collection, serverTimestamp } from "firebase/firestore";
+import { getFirestore, addDoc, collection, serverTimestamp } from "firebase/firestore";
 import "./cartpage.css";
 import { Link, Navigate } from "react-router-dom";
 
@@ -47,10 +47,14 @@ export const Cart = () => {
 	}
 
 	if(cart.length === 0)
-		return <><p>No hay productos en el carrito</p></>;
+		return(
+			<main className="container-fluid d-flex justify-content-center cartpage-main p-5">
+				<p>No hay productos en el carrito</p>
+			</main>
+		); 
 
 	return(
-		<div className="container-fluid d-flex justify-content-center p-5">
+		<main className="container-fluid d-flex justify-content-center cartpage-main p-5">
 			<div className="container-md">
 				<h1 className="cartpage_title">Carrito</h1>
 				<div className="container-fluid p-0">
@@ -65,7 +69,7 @@ export const Cart = () => {
 				<div className="confirm-btn" onClick={onFinishShipping}>FINALIZAR COMPRA</div>
 			</div>
 			</div>
-		</div>
+		</main>
 		 
 	);
 };

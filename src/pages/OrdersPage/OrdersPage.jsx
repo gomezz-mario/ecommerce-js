@@ -21,7 +21,7 @@ const OrdersPage = () => {
 				setOrders(data);
 			});
 		}
-	},[]);
+	},[userLogin]);
 
 	if(!userLogin){
 		return(
@@ -31,11 +31,13 @@ const OrdersPage = () => {
 
 	if(orders.length === 0){
 		return(
-			<>No hay compras</>
+			<main className="container-fluid d-flex justify-content-center orderspage-main p-5">
+				<span>No hay compras</span>
+			</main>
 		);
 	} else{
 		return(
-			<div className="container-fluid d-flex justify-content-center mt-5 mb-5">
+			<main className="container-fluid d-flex justify-content-center orderspage-main mt-5 mb-5">
 				<div className="container-md">
 					<h1 className="orderpage__title">Mis compras</h1>
 					<div className="container-fluid p-0">
@@ -44,7 +46,7 @@ const OrdersPage = () => {
 						}
 					</div>
 				</div>
-			</div>
+			</main>
 		);
 	}
 }
