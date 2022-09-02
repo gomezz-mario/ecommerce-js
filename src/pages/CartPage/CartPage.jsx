@@ -1,6 +1,6 @@
 import React, {useState} from "react";
-import { useCartContext } from "../../context/CartContext";
-import { useLoginContext } from "../../context/LoginContext";
+import { useCartContext } from "../../Context/CartContext";
+import { useLoginContext } from "../../Context/LoginContext";
 import { CartItem } from "../../Componentes/CartItem/CartItem";
 import { getFirestore, addDoc, collection, serverTimestamp } from "firebase/firestore";
 import "./cartpage.css";

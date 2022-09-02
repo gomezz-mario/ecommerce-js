@@ -1,6 +1,6 @@
 import React from "react";
 import "./cart_button.css";
-import {useCartContext} from "../../context/CartContext";
+import {useCartContext} from "../../Context/CartContext";
 import {BsCart2} from "react-icons/bs";
 
 import { Link } from "react-router-dom";

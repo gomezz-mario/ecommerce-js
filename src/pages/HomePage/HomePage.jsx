@@ -2,7 +2,6 @@ import BannerServices from "../../Componentes/BannerServices/BannerServices";
 import ItemListContainer from "../../Componentes/ItemListContainer/ItemListContainer";
 import Slider from "../../Componentes/Slider/Slider";
 import BannerPublicitario from "../../Componentes/BannerPublicitario/BannerPublicitario";
-//import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
 
 const dataSlider = {
 	images: [

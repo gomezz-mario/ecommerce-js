@@ -1,7 +1,7 @@
 import "./form-page.css";
 import { Link, Navigate } from "react-router-dom";
 import { useState } from "react";
-import { useLoginContext } from "../context/LoginContext";
+import { useLoginContext } from "../Context/LoginContext";
 
 
 const LoginPage = () => {

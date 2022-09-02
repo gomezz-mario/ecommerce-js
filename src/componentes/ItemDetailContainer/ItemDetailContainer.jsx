@@ -25,7 +25,7 @@ export const ItemDetailContainer = () => {
 		
 		});
 		
-	},[isLoaded]);
+	},[isLoaded, itemId]);
 
 	if(isLoaded){
 		return <ItemDetail data={data}/>

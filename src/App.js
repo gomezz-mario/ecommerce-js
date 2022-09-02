@@ -1,16 +1,15 @@
-import ItemListContainer from './Componentes/ItemListContainer/ItemListContainer';
-import ItemDetailContainer from './Componentes/ItemDetailContainer/ItemDetailContainer';
-import CartPage from './Pages/CartPage/CartPage';
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
-import CartProvider from './context/CartContext';
-import LoginProvider from './context/LoginContext';
-import OrdersPage from './Pages/OrdersPage/OrdersPage';
-import Header from './Componentes/Header/Header';
-import Footer from './Componentes/Footer/Footer';
-import HomePage from './Pages/HomePage/HomePage';
-import LoginPage from './FormsPages/LoginPage';
-import RegistrationPage from './FormsPages/RegistrationPage';
-
+import LoginProvider from "./Context/LoginContext";
+import CartProvider from "./Context/CartContext";
+import HomePage from "./Pages/HomePage/HomePage";
+import LoginPage from "./FormsPages/LoginPage";
+import RegistrationPage from "./FormsPages/RegistrationPage";
+import ItemListContainer from './Componentes/ItemListContainer/ItemListContainer';
+import ItemDetailContainer from "./Componentes/ItemDetailContainer/ItemDetailContainer";
+import OrdersPage from "./Pages/OrdersPage/OrdersPage";
+import Header from "./Componentes/Header/Header";
+import Footer from "./Componentes/Footer/Footer";
+import CartPage from "./Pages/CartPage/CartPage";
 
 
 function App() {

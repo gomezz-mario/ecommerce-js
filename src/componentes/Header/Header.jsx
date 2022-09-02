@@ -6,7 +6,7 @@ import { IoIosLogOut } from "react-icons/io";
 import Navbar from "../Navbar/Navbar";
 import CartButton from "../CartButton/CartButton";
 import { Link } from "react-router-dom";
-import { useLoginContext } from "../../context/LoginContext";
+import { useLoginContext } from "../../Context/LoginContext";
 
 const Header = () => {
 
