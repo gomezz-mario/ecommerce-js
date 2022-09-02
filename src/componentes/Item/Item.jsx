@@ -19,8 +19,6 @@ export const Item = ({data}) => {
 					<span>${parseFloat(data.price).toFixed(2)}</span>
 				</div>
 			</div>
-			
-			
 		</div>
 	);
 }
