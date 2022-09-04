@@ -1,12 +1,11 @@
 import { useState, useEffect } from "react"
-import { useLoginContext } from "../../Context/LoginContext"
+import { useLoginContext } from "../../context/LoginContext"
 import { Navigate } from "react-router-dom";
-import OrderItem from "../../Componentes/OrderItem/OrderItem";
+import OrderItem from "../../componentes/OrderItem/OrderItem";
 
 import { getFirestore, query, collection, where, getDocs } from "firebase/firestore";
 import "./order-page.css";
 
-//, where("buyerId", "==", userLogin.id)
 const OrdersPage = () => {
 	
 	const [orders, setOrders] = useState([]);

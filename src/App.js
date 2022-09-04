@@ -1,15 +1,15 @@
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
-import LoginProvider from "./Context/LoginContext";
-import CartProvider from "./Context/CartContext";
-import HomePage from "./Pages/HomePage/HomePage";
+import LoginProvider from "./context/LoginContext";
+import CartProvider from "./context/CartContext";
+import HomePage from "./pages/HomePage/HomePage";
 import LoginPage from "./FormsPages/LoginPage";
 import RegistrationPage from "./FormsPages/RegistrationPage";
-import ItemListContainer from './Componentes/ItemListContainer/ItemListContainer';
-import ItemDetailContainer from "./Componentes/ItemDetailContainer/ItemDetailContainer";
-import OrdersPage from "./Pages/OrdersPage/OrdersPage";
-import Header from "./Componentes/Header/Header";
-import Footer from "./Componentes/Footer/Footer";
-import CartPage from "./Pages/CartPage/CartPage";
+import ItemListContainer from './componentes/ItemListContainer/ItemListContainer';
+import ItemDetailContainer from "./componentes/ItemDetailContainer/ItemDetailContainer";
+import OrdersPage from "./pages/OrdersPage/OrdersPage";
+import Header from "./componentes/Header/Header";
+import Footer from "./componentes/Footer/Footer";
+import CartPage from "./pages/CartPage/CartPage";
 
 
 function App() {
